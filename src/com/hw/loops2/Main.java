@@ -117,7 +117,7 @@ public class Main {
         int next100Years = presentYear + 100;
         for (int i = 0; i <= next100Years; i++) {
             if (i % 79 == 0 && i >= past200Years) {
-                System.out.println(i);
+                System.out.println("Комета в " + i + " году");
             }
         }
     }
