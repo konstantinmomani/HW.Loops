@@ -84,8 +84,8 @@ public class Main {
         for (int i = 1; i <= 12; i++) {
             /*Непонятно в какой момент должны начисляться проценты,
              поэтому строки в теле цикла можно поменять местами*/
-            total = total + total / 100;
-            total = total + stash;
+            total += total / 100;
+            total += stash;
             System.out.println("Месяц " + i + " cумма накоплений равна " + total + " рублей");
         }
     }

@@ -5,6 +5,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -29,6 +30,7 @@ public class Main {
         for (; i > 0; i--) {
             System.out.print(i + " ");
         }
+        System.out.println();
     }
     public static void task3 () {
         System.out.println("Задача 3");
@@ -41,6 +43,20 @@ public class Main {
             year += 1;
             populationY += cleanBirthRate;
             System.out.println("Год " + year + ", население составляет " + populationY);
+        }
+    }
+    public static void task4() {
+        System.out.println("Задача 4");
+        int stash = 15_000;
+        double total = 0;
+        int month = 0;
+        while (total <= 12_000_000) {
+            /*Непонятно в какой момент должны начисляться проценты,
+             поэтому строки в теле цикла можно поменять местами*/
+            total += total * 0.07;
+            total += stash;
+            month += 1;
+            System.out.println("Месяц " + month + " cумма накоплений равна " + total + " рублей");
         }
     }
 }
