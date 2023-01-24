@@ -6,6 +6,7 @@ public class Main {
         task2();
         task3();
         task4();
+        task5();
     }
 
     public static void task1() {
@@ -49,14 +50,29 @@ public class Main {
         System.out.println("Задача 4");
         int stash = 15_000;
         double total = 0;
-        int month = 0;
-        while (total <= 12_000_000) {
+        int month = 1;
+        for (; total <= 12_000_000; month++) {
             /*Непонятно в какой момент должны начисляться проценты,
              поэтому строки в теле цикла можно поменять местами*/
             total += total * 0.07;
             total += stash;
-            month += 1;
-            System.out.println("Месяц " + month + " cумма накоплений равна " + total + " рублей");
+                System.out.println("Месяц " + month + " cумма накоплений равна " + total + " рублей");
+            }
+        }
+    public static void task5() {
+        System.out.println("Задача 5");
+        int stash = 15_000;
+        double total = 0;
+        int month = 1;
+        for (; total <= 12_000_000; month++) {
+            /*Непонятно в какой момент должны начисляться проценты,
+             поэтому строки в теле цикла можно поменять местами*/
+            total += total * 0.07;
+            total += stash;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " cумма накоплений равна " + total + " рублей");
+            }
         }
     }
+
 }
