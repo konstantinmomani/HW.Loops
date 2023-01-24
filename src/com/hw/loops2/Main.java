@@ -8,6 +8,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -87,6 +88,17 @@ public class Main {
             total += stash;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " cумма накоплений равна " + total + " рублей");
+            }
+        }
+    }
+    public static void task7 () {
+        System.out.println("Задача 7");
+        int day = 1;
+        int friday = 6;
+        for (; day <= 31; day++) {
+            if (day == friday) {
+                System.out.println("Сегодня пятница, " + day + "-е число");
+                friday += 7;
             }
         }
     }
