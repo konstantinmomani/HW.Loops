@@ -7,6 +7,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -74,5 +75,19 @@ public class Main {
             }
         }
     }
-
+    public static void task6() {
+        System.out.println("Задача 6");
+        int stash = 15_000;
+        float total = 0f;
+        int month = 1;
+        for (; month <= 12 * 9; month++) {
+            /*Непонятно в какой момент должны начисляться проценты,
+             поэтому строки в теле цикла можно поменять местами*/
+            total += total * 0.07;
+            total += stash;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " cумма накоплений равна " + total + " рублей");
+            }
+        }
+    }
 }
