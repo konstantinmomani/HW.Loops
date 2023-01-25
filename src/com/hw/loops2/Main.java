@@ -108,11 +108,19 @@ public class Main {
 
     public static void task8() {
         System.out.println("Задача 8");
+        /*Вариант 1*/
         int presentYear = 2023;
         int past200Years = presentYear - 200;
         int next100Years = presentYear + 100;
         for (int i = 0; i <= next100Years; i += 79) {
             if (/*i % 79 == 0 &&*/ i >= past200Years) {
+                System.out.println("Комета в " + i + " году");
+            }
+        }
+        System.out.println();
+        /*Вариант 2*/
+        for (int i = past200Years; i <= next100Years; i++) {
+            if (i % 79 == 0) {
                 System.out.println("Комета в " + i + " году");
             }
         }
