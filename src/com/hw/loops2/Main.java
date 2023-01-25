@@ -56,8 +56,7 @@ public class Main {
         System.out.println("Задача 4");
         int stash = 15_000;
         double total = 0;
-        int month = 1;
-        for (; total <= 12_000_000; month++) {
+        for (int month = 1; total <= 12_000_000; month++) {
             /*Непонятно в какой момент должны начисляться проценты,
              поэтому строки в теле цикла можно поменять местами*/
             total += total * 0.07;
@@ -70,8 +69,7 @@ public class Main {
         System.out.println("Задача 5");
         int stash = 15_000;
         double total = 0;
-        int month = 1;
-        for (; total <= 12_000_000; month++) {
+        for (int month = 1; total <= 12_000_000; month++) {
             /*Непонятно в какой момент должны начисляться проценты,
              поэтому строки в теле цикла можно поменять местами*/
             total += total * 0.07;
@@ -86,8 +84,7 @@ public class Main {
         System.out.println("Задача 6");
         int stash = 15_000;
         float total = 0f;
-        int month = 1;
-        for (; month <= 12 * 9; month++) {
+        for (int month = 1; month <= 12 * 9; month++) {
             /*Непонятно в какой момент должны начисляться проценты,
              поэтому строки в теле цикла можно поменять местами*/
             total += total * 0.07;
@@ -101,8 +98,7 @@ public class Main {
     public static void task7() {
         System.out.println("Задача 7");
         int day = 1;
-        int friday = 6;
-        for (; day <= 31; day++) {
+        for (int friday = 6; day <= 31; day++) {
             if (day == friday) {
                 System.out.println("Сегодня пятница, " + day + "-е число");
                 friday += 7;
@@ -115,8 +111,8 @@ public class Main {
         int presentYear = 2023;
         int past200Years = presentYear - 200;
         int next100Years = presentYear + 100;
-        for (int i = 0; i <= next100Years; i++) {
-            if (i % 79 == 0 && i >= past200Years) {
+        for (int i = 0; i <= next100Years; i += 79) {
+            if (/*i % 79 == 0 &&*/ i >= past200Years) {
                 System.out.println("Комета в " + i + " году");
             }
         }
